@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Công Thịnh | Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+        }
+        .profile-img {
+            border: 3px solid #f8fafc;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.03);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3b82f6;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            border-left: 2px solid #3b82f6;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 3px solid #f8fafc;
+        }
+        .card {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid #3b82f6;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-light text-dark font-sans">
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        <!-- Sidebar -->
+        <div class="lg:w-1/3 bg-gradient-to-br from-primary to-secondary text-white p-8 flex flex-col">
+            <!-- Profile -->
+            <div class="text-center mb-12">
+                <div class="flex justify-center mb-4">
+                    <div class="profile-img overflow-hidden rounded-full w-40 h-40 bg-white border-4 border-white">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500">
+                            <!-- <i class="fas fa-user text-6xl"></i> -->
+                            <img src="img/z6624639675024_e079b017b5ab514308d4ecedd90b090b.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                            
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-3xl font-bold mb-2">Nguyễn Công Thịnh</h1>
+                <h2 class="text-xl text-accent font-medium">Web Developer</h2>
+            </div>
+
+            <!-- Contact -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">Contact</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-3 text-accent"></i>
+                        <span>0877 449 840</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-3 text-accent"></i>
+                        <span>thinh2822k4@gmail.com</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                        <span>Trần Bình, Cầu Giấy, Hà Nội</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-birthday-cake mt-1 mr-3 text-accent"></i>
+                        <span>28/02/2004</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold mb-6 uppercase tracking-wider">Skills</h3>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>HTML/CSS/JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>ReactJS</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>ASP.NET Core</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Java/Spring Boot</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>SQL Server/MySQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Delploy</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <!-- <div>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">Languages</h3>
+                <div class="space-y-3">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Tiếng Việt</span>
+                            <span>Bản ngữ</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Tiếng Anh</span>
+                            <span>Khá</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-accent h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Main Content -->
+        <div class="lg:w-2/3 p-8 lg:p-12">
+            <!-- About -->
+            <div class="mb-12">
+                <h3 class="section-title text-2xl font-bold mb-6">About Me</h3>
+                <p class="mb-4 text-lg leading-relaxed">
+                    Tôi mong muốn vận dụng những kiến thức chuyên môn và kỹ năng lập trình đã được học tại trường cũng như trong quá trình thực tập và làm việc thực tế để phát triển thành một lập trình viên Web chuyên nghiệp.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Tôi luôn chủ động học hỏi công nghệ mới, ham tìm tòi sáng tạo và khao khát được làm việc trong môi trường chuyên nghiệp, năng động, có cơ hội thăng tiến và phát triển kỹ năng lâu dài. Mục tiêu trong 3 năm tới là trở thành lập trình viên fullstack giỏi và có thể đảm nhiệm vai trò Team Leader.
+                </p>
+            </div>
+
+            <!-- Experience -->
+            <div class="mb-12">
+                <h3 class="section-title text-2xl font-bold mb-6">Work Experience</h3>
+                <div class="space-y-8">
+                    <div class="timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-md card">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                                <div>
+                                    <h4 class="text-xl font-bold">Công ty Cổ Phần Công Nghệ và Thương Mại Tektra</h4>
+                                    <h5 class="text-lg font-semibold text-primary">Nhân viên nhập liệu - xử lý ảnh AI (Sublead)</h5>
+                                </div>
+                                <div class="mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-primary text-white text-sm font-bold rounded-full">11/2024 – 05/2025</span>
+                                </div>
+                            </div>
+                            <ul class="mt-4 pl-5 space-y-2 list-disc text-gray-600">
+                                <li>Xử lý dữ liệu ảnh đầu vào phục vụ huấn luyện mô hình AI</li>
+                                <li>Sử dụng công cụ labeling chuyên dụng để gắn nhãn dữ liệu hình ảnh</li>
+                                <li>Kiểm tra, phân loại và đảm bảo độ chính xác của dữ liệu</li>
+                                <li>Hỗ trợ quản lý nhóm 5 thành viên</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-md card">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                                <div>
+                                    <h4 class="text-xl font-bold">Freelancer</h4>
+                                    <h5 class="text-lg font-semibold text-primary">Nhân viên kỹ thuật in ấn mô hình 3D</h5>
+                                </div>
+                                <div class="mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-primary text-white text-sm font-bold rounded-full">05/2024 – 10/2024</span>
+                                </div>
+                            </div>
+                            <ul class="mt-4 pl-5 space-y-2 list-disc text-gray-600">
+                                <li>Vận hành máy in 3D sản xuất mô hình theo yêu cầu</li>
+                                <li>Thiết kế và hiệu chỉnh mô hình 3D bằng phần mềm chuyên dụng</li>
+                                <li>Kiểm tra chất lượng mô hình đầu ra</li>
+                                <li>Tham gia quy trình hậu xử lý và đóng gói sản phẩm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-md card">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                                <div>
+                                    <h4 class="text-xl font-bold">Công ty Cổ Phần Công Nghệ Mới Nhật Minh</h4>
+                                    <h5 class="text-lg font-semibold text-primary">Nhân viên kỹ thuật</h5>
+                                </div>
+                                <div class="mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-primary text-white text-sm font-bold rounded-full">01/2024 – 05/2024</span>
+                                </div>
+                            </div>
+                            <ul class="mt-4 pl-5 space-y-2 list-disc text-gray-600">
+                                <li>Hỗ trợ vận hành và bảo trì hệ thống phần mềm</li>
+                                <li>Cài đặt, cấu hình phần mềm văn phòng</li>
+                                <li>Tham gia triển khai dự án nội bộ</li>
+                                <li>Ghi nhận và xử lý lỗi kỹ thuật</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="bg-white p-6 rounded-lg shadow-md card">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                                <div>
+                                    <h4 class="text-xl font-bold">Công ty TNHH Hưng Hà</h4>
+                                    <h5 class="text-lg font-semibold text-primary">Thực tập sinh phát triển phần mềm</h5>
+                                </div>
+                                <div class="mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-primary text-white text-sm font-bold rounded-full">04/2023 – 08/2023</span>
+                                </div>
+                            </div>
+                            <ul class="mt-4 pl-5 space-y-2 list-disc text-gray-600">
+                                <li>Thực hành lập trình frontend với HTML, CSS, JavaScript</li>
+                                <li>Bảo trì website tuyển dụng của công ty</li>
+                                <li>Viết và tối ưu giao diện người dùng</li>
+                                <li>Làm việc nhóm trong quy trình phát triển phần mềm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mb-12">
+                <h3 class="section-title text-2xl font-bold mb-6">🎓 Education</h3>
+                <div class="timeline-item">
+                    <div class="bg-white p-6 rounded-lg shadow-md card">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <div>
+                                <h4 class="text-xl font-bold">Viện Đào Tạo Quốc Tế FPT – FPT Aptech</h4>
+                                <h5 class="text-lg font-semibold text-primary">Chuyên ngành Công nghệ Thông tin</h5>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="px-3 py-1 bg-primary text-white text-sm font-bold rounded-full">08/2022 – 10/2024</span>
+                            </div>
+                        </div>
+                        <p class="mt-2 text-gray-600">Đã hoàn thành các học phần về lập trình web, cơ sở dữ liệu, lập trình hướng đối tượng và phát triển phần mềm.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Projects -->
+            <div class="mb-12">
+                <h3 class="section-title text-2xl font-bold mb-6">🛠️ Featured Projects</h3>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold">1. Ví Shop – Website bán ví, túi xách</h4>
+                    <p class="text-gray-600 mb-1">⏱️ 12/2022 – 01/2023 | Frontend Developer</p>
+                    <a href="https://packchi203.github.io/Project1-WalletShop/" target="_blank" class="text-primary hover:underline mb-3 inline-block">🔗 Xem dự án</a>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Thiết kế giao diện web bán hàng bằng HTML/CSS/JS</li>
+                        <li>Cắt giao diện chuẩn responsive, hỗ trợ nhiều kích thước màn hình</li>
+                        <li>Phối hợp cùng nhóm hoàn thiện đồ án học kỳ 1</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold">2. Bookstore – Website bán sách online</h4>
+                    <p class="text-gray-600 mb-1">⏱️ 06/2023 – 07/2023 | Fullstack Developer</p>
+                    <a href="https://github.com/NguNguyen0510/bookstore" target="_blank" class="text-primary hover:underline mb-3 inline-block">🔗 Xem dự án</a>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Xây dựng website mua sách với Laravel + MySQL</li>
+                        <li>Tích hợp chức năng: đăng ký, đăng nhập, đặt hàng, thanh toán</li>
+                        <li>Tham gia viết backend và thiết kế UI frontend</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold">3. Reddit Clone – Mạng xã hội mô phỏng</h4>
+                    <p class="text-gray-600 mb-1">⏱️ 06/2024 – 08/2024 | Backend Developer</p>
+                    <a href="https://github.com/NguNguyen0510/backend" target="_blank" class="text-primary hover:underline mb-3 inline-block">🔗 Xem backend</a>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Mô phỏng chức năng như Reddit: đăng bài, bình luận, vote, chia sẻ</li>
+                        <li>Sử dụng Spring Boot, Spring Security, OAuth2 (Google, Facebook)</li>
+                        <li>Triển khai cơ chế đăng nhập OTP, mã hóa mật khẩu, tính điểm bài viết</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            
+            <!-- Activities -->
+            <div>
+                <h3 class="section-title text-2xl font-bold mb-6">Activities</h3>
+                <div class="bg-white p-6 rounded-lg shadow-md card">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div>
+                            <h4 class="text-xl font-bold">Trưởng nhóm CLB Esport FPT Aptech</h4>
+                            <h5 class="text-lg font-semibold text-primary">10/2022 – 08/2024</h5>
+                        </div>
+                    </div>
+                    <ul class="mt-4 pl-5 space-y-2 list-disc text-gray-600">
+                        <li>Điều hành hoạt động CLB, tổ chức sự kiện nội bộ</li>
+                        <li>Phân công nhiệm vụ, quản lý thành viên</li>
+                        <li>Hướng dẫn kỹ thuật và điều hướng phát triển chung của CLB</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card mt-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <div>
+                            <h4 class="text-xl font-bold">Cộng tác viên FPT Aptech</h4>
+                            <h5 class="text-lg font-semibold text-primary">2022 – 2023</h5>
+                        </div>
+                    </div>
+                    <ul class="mt-4 pl-5 space-y-2 list-disc text-gray-600">
+                        <li>Tham gia các sự kiện công nghệ, talkshow</li>
+                        <li>Hỗ trợ tổ chức và truyền thông các buổi workshop hướng nghiệp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white p-6 text-center">
+        <p>© 2024 Nguyễn Công Thịnh. All rights reserved.</p>
+        <div class="mt-4 flex justify-center space-x-4">
+            <a href="#" class="text-white hover:text-accent transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-accent transition-colors">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-accent transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-white hover:text-accent transition-colors">
+                <i class="fab fa-medium text-xl"></i>
+            </a>
+        </div>
+    </footer>
+    
+    <!-- Print Button -->
+    <button id="printBtn" class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-secondary transition-colors">
+        <i class="fas fa-print text-xl"></i>
+    </button>
+    
+    <script>
+        // Print functionality
+        document.getElementById('printBtn').addEventListener('click', function() {
+            window.print();
+        });
+        
+        // Dynamic year in footer
+        document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} Nguyễn Công Thịnh. All rights reserved.`;
+    </script>
+</body>
+</html>
